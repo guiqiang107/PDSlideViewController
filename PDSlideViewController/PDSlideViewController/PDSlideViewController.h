@@ -14,14 +14,9 @@
 @property(nonatomic,strong) UIViewController * homeVC;
 
 /**
- *  默认屏幕宽度*0.7
+ *  默认屏幕宽度*0.8
  */
 @property(nonatomic,assign) CGFloat leftViewWidth;
-
-/**
- *  动画时长,默认0.25
- */
-@property(nonatomic,assign) CGFloat duration;
 
 + (PDSlideViewController *)slideVC;
 

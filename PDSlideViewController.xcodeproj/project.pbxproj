@@ -11,12 +11,12 @@
 		ACC298A81EE7B041007DB946 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298A71EE7B041007DB946 /* AppDelegate.m */; };
 		ACC298B01EE7B041007DB946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC298AF1EE7B041007DB946 /* Assets.xcassets */; };
 		ACC298B31EE7B041007DB946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC298B11EE7B041007DB946 /* LaunchScreen.storyboard */; };
-		ACC298BD1EE7B04D007DB946 /* PDSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298BC1EE7B04D007DB946 /* PDSlideViewController.m */; };
 		ACC298C01EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298BF1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m */; };
 		ACC298C31EE7B115007DB946 /* PDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298C21EE7B115007DB946 /* PDNavigationController.m */; };
 		ACC298C81EE7B13E007DB946 /* PDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298C51EE7B13E007DB946 /* PDHomeViewController.m */; };
 		ACC298C91EE7B13E007DB946 /* PDLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298C71EE7B13E007DB946 /* PDLeftViewController.m */; };
 		ACC298CC1EE7B15D007DB946 /* PDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298CB1EE7B15D007DB946 /* PDInfoViewController.m */; };
+		ACC2996D1EE7F392007DB946 /* PDSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC2996C1EE7F392007DB946 /* PDSlideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,6 @@
 		ACC298AF1EE7B041007DB946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACC298B21EE7B041007DB946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC298B41EE7B041007DB946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACC298BB1EE7B04D007DB946 /* PDSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSlideViewController.h; sourceTree = "<group>"; };
-		ACC298BC1EE7B04D007DB946 /* PDSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSlideViewController.m; sourceTree = "<group>"; };
 		ACC298BE1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PDNavigationBar.h"; sourceTree = "<group>"; };
 		ACC298BF1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PDNavigationBar.m"; sourceTree = "<group>"; };
 		ACC298C11EE7B115007DB946 /* PDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNavigationController.h; sourceTree = "<group>"; };
@@ -39,6 +37,8 @@
 		ACC298C71EE7B13E007DB946 /* PDLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDLeftViewController.m; sourceTree = "<group>"; };
 		ACC298CA1EE7B15D007DB946 /* PDInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDInfoViewController.h; sourceTree = "<group>"; };
 		ACC298CB1EE7B15D007DB946 /* PDInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDInfoViewController.m; sourceTree = "<group>"; };
+		ACC2996B1EE7F392007DB946 /* PDSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSlideViewController.h; sourceTree = "<group>"; };
+		ACC2996C1EE7F392007DB946 /* PDSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSlideViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 		ACC298BA1EE7B04D007DB946 /* PDSlideViewController */ = {
 			isa = PBXGroup;
 			children = (
-				ACC298BB1EE7B04D007DB946 /* PDSlideViewController.h */,
-				ACC298BC1EE7B04D007DB946 /* PDSlideViewController.m */,
+				ACC2996B1EE7F392007DB946 /* PDSlideViewController.h */,
+				ACC2996C1EE7F392007DB946 /* PDSlideViewController.m */,
 				ACC298BE1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.h */,
 				ACC298BF1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m */,
 			);
@@ -183,10 +183,10 @@
 				ACC298CC1EE7B15D007DB946 /* PDInfoViewController.m in Sources */,
 				ACC298A81EE7B041007DB946 /* AppDelegate.m in Sources */,
 				ACC298C81EE7B13E007DB946 /* PDHomeViewController.m in Sources */,
-				ACC298BD1EE7B04D007DB946 /* PDSlideViewController.m in Sources */,
 				ACC298C31EE7B115007DB946 /* PDNavigationController.m in Sources */,
 				ACC298C91EE7B13E007DB946 /* PDLeftViewController.m in Sources */,
 				ACC298C01EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m in Sources */,
+				ACC2996D1EE7F392007DB946 /* PDSlideViewController.m in Sources */,
 				ACC298A51EE7B041007DB946 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +340,7 @@
 				ACC298B91EE7B041007DB946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

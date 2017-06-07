@@ -70,7 +70,6 @@ typedef NS_ENUM(NSInteger, PDSlideShowState) {
 - (void)setUp {
     
     self.leftViewWidth = self.view.bounds.size.width * 0.8;
-    self.duration = 0.25;
     
     if (self.leftVC)  {
         [self addLeftViewController];
@@ -82,9 +81,10 @@ typedef NS_ENUM(NSInteger, PDSlideShowState) {
 //添加左边控制器
 - (void)addLeftViewController {
     
-    _leftVC.view.frame = CGRectMake(-_leftViewWidth, 0, _leftViewWidth, self.view.frame.size.height);
     [self.view addSubview:_leftVC.view];
     [self addChildViewController:_leftVC];
+    
+    [self updateLeftMenuFrame];
 }
 
 //添加主控制器
@@ -102,7 +102,7 @@ typedef NS_ENUM(NSInteger, PDSlideShowState) {
     
     //最上层添加一层手势层
     _gestureView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    _gestureView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.4];
+    _gestureView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
     _gestureView.alpha = 0;
     
     _homeVC.view.frame = [UIScreen mainScreen].bounds;
@@ -119,17 +119,30 @@ typedef NS_ENUM(NSInteger, PDSlideShowState) {
     //将蒙版手势view移动到最上层
     [_homeVC.view bringSubviewToFront:_gestureView];
     
-    CGPoint pt = [sender translationInView:sender.view];
-    CGRect mainViewFrame = _homeVC.view.frame;
-    mainViewFrame.origin.x += pt.x;
-//    NSLog(@"rightSwipe：%.f,%.f,%.f",pt.x,pt.y,_homeVC.view.frame.origin.x);
-    if (mainViewFrame.origin.x <= _leftViewWidth && mainViewFrame.origin.x >= 0) {
-        
-        _homeVC.view.frame = mainViewFrame;
-        [self changeOriginX:_leftVC.view addX:pt.x];
+    [self handlePanGes:sender];
+}
+
+- (void)leftSwip:(UIPanGestureRecognizer *)sender{
+    [self handlePanGes:sender];
+}
+
+- (void)handlePanGes:(UIPanGestureRecognizer *)sender{
+    
+    if (sender.state == UIGestureRecognizerStateChanged) {
+        CGPoint pt = [sender translationInView:sender.view];
+        CGRect mainViewFrame = _homeVC.view.frame;
+        mainViewFrame.origin.x += pt.x;
+        if (mainViewFrame.origin.x <= _leftViewWidth && mainViewFrame.origin.x >= 0) {
+            
+            _homeVC.view.frame = mainViewFrame;
+            
+            [self updateLeftMenuFrame];
+            
+            [self setGestureViewAlpha];
+        }
     }
     
-    if (sender.state == UIGestureRecognizerStateEnded) {
+    else if (sender.state == UIGestureRecognizerStateEnded) {
         if (_homeVC.view.frame.origin.x > _leftViewWidth/2.0){
             [self showLeftViewController];
         }else {
@@ -138,45 +151,15 @@ typedef NS_ENUM(NSInteger, PDSlideShowState) {
     }
     
     [sender setTranslation:CGPointZero inView:sender.view];
-    
 }
 
-- (void)leftSwip:(UIPanGestureRecognizer *)sender{
-    
-    CGPoint pt = [sender translationInView:sender.view];
-//    NSLog(@"leftSwip：%.f,%.f,---%.f",pt.x,pt.y,_homeVC.view.frame.origin.x);
-    
-    CGRect mainViewFrame = _homeVC.view.frame;
-    mainViewFrame.origin.x += pt.x;
-    
-    if (mainViewFrame.origin.x <= _leftViewWidth && mainViewFrame.origin.x > 0) {
-        
-        _homeVC.view.frame = mainViewFrame;
-        [self changeOriginX:_leftVC.view addX:pt.x];
-    }
-    
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        if (_homeVC.view.frame.origin.x > _leftViewWidth/2.0){
-            [self showLeftViewController];
-        } else {
-            [self hideLeftViewController:YES];
-        }
-    }
-
-    [sender setTranslation:CGPointZero inView:sender.view];
+//更新左侧菜单位置
+-(void)updateLeftMenuFrame{
+    _leftVC.view.center = CGPointMake((CGRectGetMinX(_homeVC.view.frame) + (self.view.bounds.size.width - self.leftViewWidth))/2, _leftVC.view.center.y);
 }
 
 - (void)tapGesture:(UITapGestureRecognizer *)sender{
     [self hideLeftVC];
-}
-
-#pragma mark - private
-- (void)changeOriginX:(UIView *)changeView addX:(CGFloat)addX {
-    CGRect rect      = changeView.frame;
-    rect.origin.x   += addX;
-    changeView.frame = rect;
-    
-    [self setGestureViewAlpha];
 }
 
 //主控制器添加手势
@@ -203,17 +186,10 @@ typedef NS_ENUM(NSInteger, PDSlideShowState) {
 
 - (void)showLeftViewController{
     
-    CGFloat realDuration = _duration * ABS(_leftVC.view.frame.origin.x / -_leftViewWidth);
-    [UIView animateWithDuration:realDuration animations:^{
-        CGRect leftFrame    = _leftVC.view.frame;
-        leftFrame.origin.x  = 0;
-        _leftVC.view.frame  = leftFrame;
+    [UIView animateWithDuration:0.25 animations:^{
+        _homeVC.view.center = CGPointMake(_homeVC.view.bounds.size.width/2 + self.leftViewWidth, _homeVC.view.center.y);
         
-        CGRect mainFrame    = _homeVC.view.frame;
-        mainFrame.origin.x  = _leftViewWidth;
-        _homeVC.view.frame  = mainFrame;
-        
-        mainFrame.origin.x  = self.view.frame.size.width + _leftViewWidth;
+        _leftVC.view.frame = self.view.bounds;
         
         [self setGestureViewAlpha];
     }];
@@ -224,18 +200,17 @@ typedef NS_ENUM(NSInteger, PDSlideShowState) {
 }
 
 - (void)hideLeftViewController:(BOOL)animate{
-    CGFloat realDuration = _duration * ABS((_leftViewWidth + _leftVC.view.frame.origin.x) / _leftViewWidth);
-    [UIView animateWithDuration:animate ? realDuration : 0 animations:^{
-        CGRect leftFrame    = _leftVC.view.frame;
-        leftFrame.origin.x  = -_leftViewWidth;
-        _leftVC.view.frame  = leftFrame;
+
+    [UIView animateWithDuration:0.25 animations:^{
+        CGRect frame = _homeVC.view.frame;
+        frame.origin.x = 0;
+        _homeVC.view.frame = frame;
         
-        CGRect mainFrame    = _homeVC.view.frame;
-        mainFrame.origin.x  = 0;
-        _homeVC.view.frame  = mainFrame;
+        [self updateLeftMenuFrame];
         
         [self setGestureViewAlpha];
     }];
+    
     _showState = PDSlideShowStateMain;
     
     [self setupMainViewControllerGesture];
