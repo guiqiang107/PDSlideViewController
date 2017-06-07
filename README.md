@@ -15,3 +15,4 @@
     PDNavigationController *navc = [[PDNavigationController alloc] initWithRootViewController:slideVC];
     slideVC.navigationController.navigationBarHidden = YES;
     window.rootViewController = navc;
+![screenShot](https://github.com/guiqiang107/PDSlideViewController/raw/master/PDSlideViewControllerGif.gif)
