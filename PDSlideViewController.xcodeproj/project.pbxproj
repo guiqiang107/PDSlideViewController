@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACC298A51EE7B041007DB946 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298A41EE7B041007DB946 /* main.m */; };
+		ACC298A81EE7B041007DB946 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298A71EE7B041007DB946 /* AppDelegate.m */; };
+		ACC298B01EE7B041007DB946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC298AF1EE7B041007DB946 /* Assets.xcassets */; };
+		ACC298B31EE7B041007DB946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC298B11EE7B041007DB946 /* LaunchScreen.storyboard */; };
+		ACC298BD1EE7B04D007DB946 /* PDSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298BC1EE7B04D007DB946 /* PDSlideViewController.m */; };
+		ACC298C01EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298BF1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m */; };
+		ACC298C31EE7B115007DB946 /* PDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298C21EE7B115007DB946 /* PDNavigationController.m */; };
+		ACC298C81EE7B13E007DB946 /* PDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298C51EE7B13E007DB946 /* PDHomeViewController.m */; };
+		ACC298C91EE7B13E007DB946 /* PDLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298C71EE7B13E007DB946 /* PDLeftViewController.m */; };
+		ACC298CC1EE7B15D007DB946 /* PDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC298CB1EE7B15D007DB946 /* PDInfoViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ACC298A01EE7B041007DB946 /* PDSlideViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDSlideViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC298A41EE7B041007DB946 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ACC298A61EE7B041007DB946 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ACC298A71EE7B041007DB946 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ACC298AF1EE7B041007DB946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACC298B21EE7B041007DB946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACC298B41EE7B041007DB946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC298BB1EE7B04D007DB946 /* PDSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSlideViewController.h; sourceTree = "<group>"; };
+		ACC298BC1EE7B04D007DB946 /* PDSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSlideViewController.m; sourceTree = "<group>"; };
+		ACC298BE1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PDNavigationBar.h"; sourceTree = "<group>"; };
+		ACC298BF1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PDNavigationBar.m"; sourceTree = "<group>"; };
+		ACC298C11EE7B115007DB946 /* PDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNavigationController.h; sourceTree = "<group>"; };
+		ACC298C21EE7B115007DB946 /* PDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNavigationController.m; sourceTree = "<group>"; };
+		ACC298C41EE7B13E007DB946 /* PDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHomeViewController.h; sourceTree = "<group>"; };
+		ACC298C51EE7B13E007DB946 /* PDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHomeViewController.m; sourceTree = "<group>"; };
+		ACC298C61EE7B13E007DB946 /* PDLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDLeftViewController.h; sourceTree = "<group>"; };
+		ACC298C71EE7B13E007DB946 /* PDLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDLeftViewController.m; sourceTree = "<group>"; };
+		ACC298CA1EE7B15D007DB946 /* PDInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDInfoViewController.h; sourceTree = "<group>"; };
+		ACC298CB1EE7B15D007DB946 /* PDInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDInfoViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACC2989D1EE7B041007DB946 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACC298971EE7B041007DB946 = {
+			isa = PBXGroup;
+			children = (
+				ACC298A21EE7B041007DB946 /* PDSlideViewController */,
+				ACC298A11EE7B041007DB946 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACC298A11EE7B041007DB946 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACC298A01EE7B041007DB946 /* PDSlideViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACC298A21EE7B041007DB946 /* PDSlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ACC298BA1EE7B04D007DB946 /* PDSlideViewController */,
+				ACC298A61EE7B041007DB946 /* AppDelegate.h */,
+				ACC298A71EE7B041007DB946 /* AppDelegate.m */,
+				ACC298C11EE7B115007DB946 /* PDNavigationController.h */,
+				ACC298C21EE7B115007DB946 /* PDNavigationController.m */,
+				ACC298C41EE7B13E007DB946 /* PDHomeViewController.h */,
+				ACC298C51EE7B13E007DB946 /* PDHomeViewController.m */,
+				ACC298C61EE7B13E007DB946 /* PDLeftViewController.h */,
+				ACC298C71EE7B13E007DB946 /* PDLeftViewController.m */,
+				ACC298CA1EE7B15D007DB946 /* PDInfoViewController.h */,
+				ACC298CB1EE7B15D007DB946 /* PDInfoViewController.m */,
+				ACC298AF1EE7B041007DB946 /* Assets.xcassets */,
+				ACC298B11EE7B041007DB946 /* LaunchScreen.storyboard */,
+				ACC298B41EE7B041007DB946 /* Info.plist */,
+				ACC298A31EE7B041007DB946 /* Supporting Files */,
+			);
+			path = PDSlideViewController;
+			sourceTree = "<group>";
+		};
+		ACC298A31EE7B041007DB946 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACC298A41EE7B041007DB946 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACC298BA1EE7B04D007DB946 /* PDSlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ACC298BB1EE7B04D007DB946 /* PDSlideViewController.h */,
+				ACC298BC1EE7B04D007DB946 /* PDSlideViewController.m */,
+				ACC298BE1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.h */,
+				ACC298BF1EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m */,
+			);
+			path = PDSlideViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACC2989F1EE7B041007DB946 /* PDSlideViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC298B71EE7B041007DB946 /* Build configuration list for PBXNativeTarget "PDSlideViewController" */;
+			buildPhases = (
+				ACC2989C1EE7B041007DB946 /* Sources */,
+				ACC2989D1EE7B041007DB946 /* Frameworks */,
+				ACC2989E1EE7B041007DB946 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDSlideViewController;
+			productName = PDSlideViewController;
+			productReference = ACC298A01EE7B041007DB946 /* PDSlideViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACC298981EE7B041007DB946 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = com.Xpand;
+				TargetAttributes = {
+					ACC2989F1EE7B041007DB946 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = VEMSS45948;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = ACC2989B1EE7B041007DB946 /* Build configuration list for PBXProject "PDSlideViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACC298971EE7B041007DB946;
+			productRefGroup = ACC298A11EE7B041007DB946 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACC2989F1EE7B041007DB946 /* PDSlideViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACC2989E1EE7B041007DB946 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC298B31EE7B041007DB946 /* LaunchScreen.storyboard in Resources */,
+				ACC298B01EE7B041007DB946 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACC2989C1EE7B041007DB946 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC298CC1EE7B15D007DB946 /* PDInfoViewController.m in Sources */,
+				ACC298A81EE7B041007DB946 /* AppDelegate.m in Sources */,
+				ACC298C81EE7B13E007DB946 /* PDHomeViewController.m in Sources */,
+				ACC298BD1EE7B04D007DB946 /* PDSlideViewController.m in Sources */,
+				ACC298C31EE7B115007DB946 /* PDNavigationController.m in Sources */,
+				ACC298C91EE7B13E007DB946 /* PDLeftViewController.m in Sources */,
+				ACC298C01EE7B0E4007DB946 /* UIViewController+PDNavigationBar.m in Sources */,
+				ACC298A51EE7B041007DB946 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ACC298B11EE7B041007DB946 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC298B21EE7B041007DB946 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACC298B51EE7B041007DB946 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ACC298B61EE7B041007DB946 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACC298B81EE7B041007DB946 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VEMSS45948;
+				INFOPLIST_FILE = PDSlideViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Xpand.PDSlideViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACC298B91EE7B041007DB946 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VEMSS45948;
+				INFOPLIST_FILE = PDSlideViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Xpand.PDSlideViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACC2989B1EE7B041007DB946 /* Build configuration list for PBXProject "PDSlideViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC298B51EE7B041007DB946 /* Debug */,
+				ACC298B61EE7B041007DB946 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC298B71EE7B041007DB946 /* Build configuration list for PBXNativeTarget "PDSlideViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC298B81EE7B041007DB946 /* Debug */,
+				ACC298B91EE7B041007DB946 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACC298981EE7B041007DB946 /* Project object */;
+}
